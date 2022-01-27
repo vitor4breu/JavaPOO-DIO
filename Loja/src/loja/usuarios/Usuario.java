@@ -15,5 +15,5 @@ public abstract class Usuario {
     public Usuario(String nome, DataNascimento dataNascimento, String login, String senha) {
     }
 
-    }
+}
 

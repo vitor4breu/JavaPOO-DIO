@@ -2,7 +2,7 @@ package loja.usuarios.produtos;
 
 import java.util.ArrayList;
 
-public class Carrinho{
+public class Carrinho {
 
     public static String tipoLista = "Carrinho";
 

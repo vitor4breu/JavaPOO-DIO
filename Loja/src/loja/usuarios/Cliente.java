@@ -18,19 +18,21 @@ public class Cliente extends Usuario implements iLista {
         super(nome, dataNascimento, login, senha);
     }
 
-    public void verCarrinho(){
+    public void verCarrinho() {
         mostrarProdutosDaLista(produtosNoCarrinho, carrinho.getTipoLista());
     }
 
-    public void verProdutosDivulgados(){
+    public void verProdutosDivulgados() {
         mostrarProdutosDaLista(produtosCadastrados, ProdutosCadastrados.getTipoLista());
     }
 
-    public void adicionarProdutoAoCarrinho(Produto produto){
-        for(Produto produtoCadastrado : produtosCadastrados){
+    public void adicionarProdutoAoCarrinho(Produto produto) {
+        for (Produto produtoCadastrado : produtosCadastrados) {
             String produtoAnalisado = produtoCadastrado.getNome();
-            if(produtoAnalisado.equals(produto.getNome())){adicionarProduto(produtosNoCarrinho, produto);
-                return;}
+            if (produtoAnalisado.equals(produto.getNome())) {
+                adicionarProduto(produtosNoCarrinho, produto);
+                return;
+            }
 
         }
         System.out.println("O produto não está no sistema");

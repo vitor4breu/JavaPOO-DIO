@@ -3,6 +3,7 @@ package loja.usuarios;
 import loja.usuarios.data.DataNascimento;
 import loja.usuarios.produtos.Produto;
 import loja.usuarios.produtos.ProdutosCadastrados;
+
 import java.util.ArrayList;
 
 
@@ -15,21 +16,20 @@ public class Funcionario extends Usuario implements iLista {
     }
 
 
-    public void verProdutosDivulgados(){
+    public void verProdutosDivulgados() {
         mostrarProdutosDaLista(produtosCadastrados, ProdutosCadastrados.getTipoLista());
     }
 
-    public void cadastrarProduto(Produto produto){
-        for(Produto produtoCadastrado : produtosCadastrados){
+    public void cadastrarProduto(Produto produto) {
+        for (Produto produtoCadastrado : produtosCadastrados) {
             String produtoAnalisado = produtoCadastrado.getNome();
-            if(produtoAnalisado.equals(produto.getNome())){
+            if (produtoAnalisado.equals(produto.getNome())) {
                 System.out.println("O produto já está no sistema");
-                return;}
+                return;
             }
+        }
         adicionarProduto(produtosCadastrados, produto);
     }
-
-
 
 
     public void removerProdutoDoCarrinho(Produto produto) {
