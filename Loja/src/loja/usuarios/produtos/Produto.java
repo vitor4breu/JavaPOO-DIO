@@ -1,7 +1,8 @@
 package loja.usuarios.produtos;
 
 public class Produto {
-    String nome;
+
+    String nome; // Nome e valor do Produto
     float valor;
 
     public Produto(String nome, float valor) {
